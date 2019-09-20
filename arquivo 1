@@ -1,0 +1,11 @@
+
+import numpy as np
+import matplotlib.pyplot as plt
+base = [50,60,55,52,53,54,55,60,62,51,52,60]
+h = np.histogram(base, bins = 'auto')
+print(h)
+plt.hist(base, bins = 'auto')
+plt.title('Dados')
+plt.ylabel('Frequência')
+plt.xlabel('Valores')
+plt.show()
