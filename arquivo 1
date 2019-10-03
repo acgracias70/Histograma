@@ -1,8 +1,13 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy import stats
 base = [50,60,55,52,53,54,55,60,62,51,52,60]
-h = np.histogram(base, bins = 'auto')
+print(np.mean(base)) #calcula a média
+print(np.median(base))# calcula a mediana
+print(np.std(base, ddof = 1))#calcula o desvio padrão
+print(stats.describe(base)) # descreve os resultados
+h = np.histogram(base, bins = 'auto') #calcula o histograma
 print(h)
 plt.hist(base, bins = 'auto')
 plt.title('Dados')
